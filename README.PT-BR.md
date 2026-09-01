@@ -1,6 +1,6 @@
 # Olist E-commerce Analytics Project
 
-🌐 **Idiomas:** [English](README.md) | Português | [日本語](README.ja.md)
+🌐 **Idiomas:** [English](README.md) | Português | [日本語](README.JP.md)
 
 ## Visão Geral
 
