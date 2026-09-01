@@ -170,7 +170,7 @@ As correlações apresentadas neste projeto (ex: volume vs. receita, atraso vs. 
 ## Entrega e Operações
 
 * Em média, os pedidos foram entregues **11,18 dias antes da data estimada de entrega**.
-* A taxa geral de entregas atrasadas foi de **7,87%** do total de pedidos.
+* A taxa geral de entregas atrasadas foi de **8.11%** do total de pedidos.
 * Atrasos extremos representaram aproximadamente **1% das entregas analisadas**.
 * Apesar da baixa frequência, esses casos extremos merecem atenção devido ao seu potencial impacto na experiência do cliente.
 
