@@ -170,7 +170,7 @@ Correlations reported throughout this project (e.g., volume vs. revenue, delay v
 ## Delivery & Operations
 
 * On average, orders were delivered **11.18 days ahead of the estimated delivery date**.
-* The overall late delivery rate was **7.87%** of all orders.
+* The overall late delivery rate was **8.11%** of all orders.
 * Extreme delivery delays represented approximately **1% of analyzed deliveries**.
 * Although relatively uncommon, extreme delays deserve attention because of their potential impact on customer experience.
 
