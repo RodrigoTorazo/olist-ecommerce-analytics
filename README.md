@@ -2,13 +2,26 @@
 
 🌐 **Languages:** English | [Português](README.PT-BR.md) | [日本語](README.JP.md)
 
+---
+
+## Key Findings at a Glance
+
+* **R$13.59M in GMV** across **99,441 orders** and **112,650 items sold**
+* **8.11%** of orders with a known delivery outcome were delivered late
+* The **top 5 product categories account for 40.27% of total GMV**
+* The **top 10% of sellers account for 67.56% of total sales**
+* Late deliveries were associated with a **1.72-point lower average review score**
+* São Paulo accounts for **41.98% of the customer base**
+
+---
+
 ## Project Overview
 
 This project analyzes the performance of a Brazilian e-commerce marketplace using publicly available data from Olist.
 
 The goal is to transform transactional data into **actionable business insights**, focusing on:
 
-* Sales and revenue performance
+* Sales and GMV performance
 * Customer behavior and distribution
 * Product and category performance
 * Payment methods
@@ -25,23 +38,22 @@ The project follows an end-to-end analytics workflow:
 
 ### Sales Performance
 
-* What is the total revenue and how does it evolve over time?
-* Which product categories generate the most revenue?
+* What is the total GMV and how does it evolve over time?
+* Which product categories generate the most sales value?
 * Which states contribute the most to sales?
-* Which payment methods are most commonly used?
+* Which payment methods contribute the most to total payment value?
 
 ### Customer Analysis
 
 * How many customers does the marketplace have?
 * Which states have the highest concentration of customers?
 * How are order values distributed?
-* What is the repeat customer rate?
 
 ### Product & Category Analysis
 
 * Which categories have the highest sales volume?
 * Which categories receive the highest customer ratings?
-* Which factors are most strongly associated with category revenue?
+* Which factors are most strongly associated with category sales value?
 
 ### Logistics & Customer Satisfaction
 
@@ -70,10 +82,10 @@ The project follows an end-to-end analytics workflow:
 
 * Power BI
 
-### Other Tools
+### Development & Version Control
 
 * Jupyter Notebook
-* GitHub
+* Git / GitHub
 
 ---
 
@@ -104,7 +116,7 @@ The cleaning process included:
 
 Python was used to investigate:
 
-* Revenue trends
+* Revenue and sales trends
 * Customer behavior
 * Product and category performance
 * Payment methods
@@ -146,20 +158,22 @@ The visualizations include KPI cards, bar charts, a time-series chart, treemap, 
 
 ## A Note on Terminology
 
-The R$13.59M figure referenced throughout this project reflects **GMV (Gross Merchandise Value)** — the total value transacted through the marketplace — not platform revenue (which would be the commission Olist earns on each sale). This is the standard metric for marketplace-level analysis, but it is not equivalent to profit or platform earnings, since no cost or margin data is included in this dataset.
+The **R$13.59M** figure referenced throughout this project reflects **GMV (Gross Merchandise Value)** — the total value transacted through the marketplace — not platform revenue (which would be the commission Olist earns on each sale).
 
-Correlations reported throughout this project (e.g., volume vs. revenue, delay vs. review score) describe **statistical association, not causation**. They indicate the strength and direction of a relationship, not a proven cause-and-effect mechanism.
+This is the standard metric for marketplace-level analysis, but it is not equivalent to profit or platform earnings, since no cost or margin data is included in this dataset.
+
+Correlations reported throughout this project (e.g., volume vs. sales value, delay vs. review score) describe **statistical association, not causation**. They indicate the strength and direction of a relationship, not a proven cause-and-effect mechanism.
 
 ---
 
 # Key Insights
 
-## Sales & Revenue
+## Sales & GMV
 
-* The marketplace generated approximately **R$13.59 million in GMV**, across **112,650 items sold** and **99,441 orders**.
-* The **top 5 product categories account for 40.27% of total revenue**, indicating significant sales concentration.
-* Items sold have a strong association with category revenue (**0.95 correlation**), while the association between average price and revenue is almost nonexistent (**0.02 correlation**).
-* This indicates that **sales volume is much more strongly associated with category revenue than average price is**.
+* The marketplace recorded approximately **R$13.59 million in GMV**, across **112,650 items sold** and **99,441 orders**.
+* The **top 5 product categories account for 40.27% of total GMV**, indicating significant sales concentration.
+* Items sold have a strong association with category sales value (**0.95 correlation**), while the association between average price and sales value is almost nonexistent (**0.02 correlation**).
+* This indicates that **sales volume is much more strongly associated with category sales value than average price is**.
 
 ## Customers & Geography
 
@@ -178,7 +192,7 @@ Correlations reported throughout this project (e.g., volume vs. revenue, delay v
 
 * **57.78% of reviews received a 5-star rating**, making it the most common review score.
 * Late deliveries had an average review score of **2.57**, compared with **4.29** for orders delivered on time — a **1.72-point gap**.
-* The correlation between delivery delay and review score was **-0.27**, a moderate negative association, consistent with the gap observed above.
+* The correlation between delivery delay and review score was **-0.27**, indicating a negative association between delivery delay and customer satisfaction.
 
 ## Payments
 
@@ -198,19 +212,29 @@ Correlations reported throughout this project (e.g., volume vs. revenue, delay v
 
 ### 1. Prioritize High-Performing Categories
 
-Since 40.27% of revenue is concentrated in just 5 categories, these categories should be prioritized in seller acquisition, inventory availability, and promotional planning. **Suggested success metric:** track revenue share of top 5 categories quarter-over-quarter to confirm growth isn't cannibalizing the broader catalog.
+Since 40.27% of GMV is concentrated in just 5 categories, these categories should be prioritized in seller acquisition, inventory availability, and promotional planning.
+
+**Suggested success metric:** track the GMV share of the top 5 categories quarter-over-quarter to confirm that growth is not coming at the expense of the broader catalog.
 
 ### 2. Monitor Regional Logistics Performance
 
-States with delivery times or delay rates above the 8.11% average should be flagged for root-cause investigation (seller location, shipping distance, carrier performance). **Suggested success metric:** reduce late-delivery rate in the worst-performing states to within 2 points of the national average within two quarters.
+States with delivery times or delay rates above the 8.11% average should be flagged for root-cause investigation, including seller location, shipping distance, and carrier performance.
+
+**Suggested success metric:** reduce the late-delivery rate in the worst-performing states to within 2 percentage points of the national average within two quarters.
 
 ### 3. Investigate Extreme Delivery Delays
 
-Extreme delays (~1% of deliveries) are rare but linked to the sharpest review-score drops. Monitoring by state, seller, and category can help isolate recurring failure points. **Suggested success metric:** cut the extreme-delay rate in half, given its disproportionate impact on the 2.57 average score for late orders.
+Extreme delays (~1% of deliveries) are rare but linked to the sharpest review-score drops.
+
+Monitoring by state, seller, and category can help isolate recurring failure points.
+
+**Suggested success metric:** cut the extreme-delay rate in half, given its disproportionate impact on the 2.57 average score for late orders.
 
 ### 4. Reduce Seller Concentration Risk
 
-With the top 10% of sellers generating 67.56% of sales, the marketplace carries meaningful concentration risk — losing a handful of top sellers could materially impact revenue. **Suggested success metric:** grow the sales share of mid-tier sellers (deciles 2–5) by a target percentage over the next year to diversify the base.
+With the top 10% of sellers generating 67.56% of sales, the marketplace carries meaningful concentration risk — losing a handful of top sellers could materially impact sales.
+
+**Suggested success metric:** grow the sales share of mid-tier sellers (deciles 2–5) by a target percentage over the next year to diversify the seller base.
 
 ---
 
@@ -291,7 +315,7 @@ olist-ecommerce-analytics/
 
 # Skills Demonstrated
 
-* Data Cleaning
+* Data Cleaning & Preparation
 * Exploratory Data Analysis
 * SQL Analysis
 * Relational Database Design
@@ -299,8 +323,7 @@ olist-ecommerce-analytics/
 * Data Visualization
 * Power BI Dashboard Development
 * KPI Development
-* Geographic Analysis
-* Customer Analysis
+* Geographic & Customer Analysis
 * Product & Category Analysis
 * Logistics Analysis
 * Statistical Correlation Analysis
@@ -312,6 +335,6 @@ olist-ecommerce-analytics/
 
 This project demonstrates a complete data analytics workflow, from data exploration and preparation to SQL analysis, business insight generation, and interactive dashboard development.
 
-The analysis highlights important characteristics of the marketplace, including **revenue concentration by category, geographic customer concentration, seller dependency, and the relationship between delivery performance and customer satisfaction**.
+The analysis highlights important characteristics of the marketplace, including **sales concentration by category, geographic customer concentration, seller dependency, and the relationship between delivery performance and customer satisfaction**.
 
 The project demonstrates how transactional data can be transformed into **actionable business insights and recommendations using Python, SQL, and Power BI**.
