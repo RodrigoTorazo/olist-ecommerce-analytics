@@ -1,9 +1,6 @@
 # Python
 __pycache__/
 *.py[cod]
-.ipynb_checkpoints/
-
-# Virtual environments
 .venv/
 venv/
 env/
@@ -12,9 +9,8 @@ env/
 .ipynb_checkpoints/
 
 # Olist raw data
-data/*.csv
+data/**/*.csv
 
 # OS files
 .DS_Store
 Thumbs.db
-data/**/*.csv
